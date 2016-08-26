@@ -124,16 +124,6 @@ class NewsDemandTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	 * @test
 	 * @return void
 	 */
-	public function dateFieldCanBeSet() {
-		$value = 'field';
-		$this->instance->setDateField($value);
-		$this->assertEquals($value, $this->instance->getDateField());
-	}
-
-	/**
-	 * @test
-	 * @return void
-	 */
 	public function monthCanBeSet() {
 		$value = 4;
 		$this->instance->setMonth($value);
