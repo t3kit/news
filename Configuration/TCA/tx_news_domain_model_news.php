@@ -136,6 +136,9 @@ $tx_news_domain_model_news = [
                 'size' => 16,
                 'eval' => 'datetime',
                 'default' => 0,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'endtime' => [
@@ -147,6 +150,9 @@ $tx_news_domain_model_news = [
                 'size' => 16,
                 'eval' => 'datetime',
                 'default' => 0,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'fe_group' => [
@@ -254,6 +260,9 @@ $tx_news_domain_model_news = [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'author_email' => [
@@ -263,6 +272,9 @@ $tx_news_domain_model_news = [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'categories' => [
@@ -292,6 +304,9 @@ $tx_news_domain_model_news = [
                 'size' => 10,
                 'minitems' => 0,
                 'maxitems' => 99,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'related' => [
@@ -316,6 +331,9 @@ $tx_news_domain_model_news = [
                             'addWhere' => ' AND tx_news_domain_model_news.uid != ###THIS_UID###'
                         ]
                     ],
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
                 ],
             ]
         ],
@@ -358,7 +376,10 @@ $tx_news_domain_model_news = [
                     'enabledControls' => [
                         'info' => false,
                     ]
-                ]
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'type' => [
@@ -386,6 +407,9 @@ $tx_news_domain_model_news = [
                 'placeholder' => $ll . 'tx_news_domain_model_news.keywords.placeholder',
                 'cols' => 30,
                 'rows' => 5,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'description' => [
@@ -396,6 +420,9 @@ $tx_news_domain_model_news = [
                 'type' => 'text',
                 'cols' => 30,
                 'rows' => 5,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'internalurl' => [
@@ -443,7 +470,10 @@ $tx_news_domain_model_news = [
             'l10n_mode' => 'mergeIfNotBlank',
             'label' => 'LLL:EXT:lang/locallang_tca.xlf:editlock',
             'config' => [
-                'type' => 'check'
+                'type' => 'check',
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'content_elements' => [
@@ -471,7 +501,10 @@ $tx_news_domain_model_news = [
                     'enabledControls' => [
                         'info' => false,
                     ]
-                ]
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'tags' => [
@@ -519,6 +552,9 @@ $tx_news_domain_model_news = [
                         'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
                     ],
                 ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ],
         ],
         'path_segment' => [
@@ -555,6 +591,9 @@ $tx_news_domain_model_news = [
                         'showRemovedLocalizationRecords' => true,
                         'showAllLocalizationLink' => true,
                         'showSynchronizationLink' => true
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
                     ],
                     'foreign_match_fields' => [
                         'fieldname' => 'fal_media',
@@ -612,6 +651,9 @@ $tx_news_domain_model_news = [
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'fal_related_files',
                 [
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
                     'appearance' => [
                         'createNewRelationLinkTitle' => $ll . 'tx_news_domain_model_news.fal_related_files.add',
                         'showPossibleLocalizationRecords' => true,

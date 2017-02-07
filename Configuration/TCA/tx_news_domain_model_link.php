@@ -103,6 +103,9 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'description' => [
@@ -113,6 +116,9 @@ return [
                 'type' => 'text',
                 'cols' => 30,
                 'rows' => 5,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
         'uri' => [
@@ -135,7 +141,10 @@ return [
                         ],
                         'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
                     ]
-                ]
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true,
+                ],
             ]
         ],
     ],
