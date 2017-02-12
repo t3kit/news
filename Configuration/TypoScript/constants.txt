@@ -2,7 +2,7 @@ plugin.tx_news {
 	rss.channel {
 		title = Dummy Title
 		description =
-		link = http://example.com
+		link = http://example.com/
 		language = en-gb
 		copyright = TYPO3 News
 		category =

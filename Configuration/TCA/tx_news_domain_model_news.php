@@ -34,6 +34,7 @@ $tx_news_domain_model_news = [
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
+        'translationSource' => 'l10n_source',
         'default_sortby' => 'ORDER BY datetime DESC',
         'sortby' => ($configuration->getManualSorting() ? 'sorting' : ''),
         'delete' => 'deleted',
@@ -81,6 +82,11 @@ $tx_news_domain_model_news = [
                 'foreign_table' => 'tx_news_domain_model_news',
                 'foreign_table_where' => 'AND tx_news_domain_model_news.pid=###CURRENT_PID### AND tx_news_domain_model_news.sys_language_uid IN (-1,0)',
                 'showIconTable' => false
+            ]
+        ],
+        'l10n_source' => [
+            'config' => [
+                'type' => 'passthrough'
             ]
         ],
         'l10n_diffsource' => [
