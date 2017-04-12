@@ -33,7 +33,7 @@ class Tx_News_Controller_NewsController extends Tx_News_Controller_NewsBaseContr
 	/**
 	 * @var array
 	 */
-	protected $ignoredSettingsForOverride = ['demandclass', 'orderbyallowed'];
+	protected $ignoredSettingsForOverride = array('demandclass', 'orderbyallowed');
 
 	/**
 	 * @var \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController
