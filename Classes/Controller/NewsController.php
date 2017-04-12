@@ -31,6 +31,11 @@
 class Tx_News_Controller_NewsController extends Tx_News_Controller_NewsBaseController {
 
 	/**
+	 * @var array
+	 */
+	protected $ignoredSettingsForOverride = ['demandclass', 'orderbyallowed'];
+
+	/**
 	 * @var \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController
 	 */
 	protected $typoScriptFrontendController;
@@ -131,7 +136,9 @@ class Tx_News_Controller_NewsController extends Tx_News_Controller_NewsBaseContr
 		unset($overwriteDemand['orderByAllowed']);
 
 		foreach ($overwriteDemand as $propertyName => $propertyValue) {
-			Tx_Extbase_Reflection_ObjectAccess::setProperty($demand, $propertyName, $propertyValue);
+			if (in_array(strtolower($propertyName), $this->ignoredSettingsForOverride, true)) {
+				Tx_Extbase_Reflection_ObjectAccess::setProperty($demand, $propertyName, $propertyValue);
+			}
 		}
 		return $demand;
 	}
